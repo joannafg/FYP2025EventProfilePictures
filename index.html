@@ -552,7 +552,7 @@
         .modal {
             display: none;
             position: fixed;
-            z-index: 1000;
+            z-index: 9999;
             left: 0;
             top: 0;
             width: 100%;
@@ -568,10 +568,31 @@
             border-radius: var(--radius-xl);
             width: 90%;
             max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
             position: relative;
             border: 2px solid var(--neon-cyan);
             box-shadow: 0 0 50px var(--neon-cyan);
             animation: modalSlideIn 0.3s ease;
+        }
+
+        /* Custom scrollbar for modal */
+        .modal-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .modal-content::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-sm);
+        }
+
+        .modal-content::-webkit-scrollbar-thumb {
+            background: var(--neon-cyan);
+            border-radius: var(--radius-sm);
+        }
+
+        .modal-content::-webkit-scrollbar-thumb:hover {
+            background: var(--electric-blue);
         }
 
         @keyframes modalSlideIn {
@@ -627,6 +648,36 @@
             line-height: 1.6;
             font-size: 1rem;
             text-align: center;
+        }
+
+        /* Clickable image styles */
+        .clickable-image {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .clickable-image:hover {
+            transform: scale(1.02);
+            filter: brightness(1.1);
+        }
+
+        .clickable-image::after {
+            content: '🔗';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px;
+            border-radius: 50%;
+            font-size: 12px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .clickable-image:hover::after {
+            opacity: 1;
         }
 
         /* Schedule */
@@ -1025,8 +1076,9 @@
 
             .modal-content {
                 width: 95%;
-                margin: 10% auto;
+                margin: 5% auto;
                 padding: var(--space-lg);
+                max-height: 90vh;
             }
 
             .modal-avatar {
@@ -1161,15 +1213,15 @@
             </div>
             <div class="speakers-grid">
                 <div class="speaker-card glass-card" 
-                     onclick="openModal('benny-prawira', 'https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20Speakers%20Photos%20and%20Titles%20/Benny%20Prawira%20(Steering%20Committee%20Member%20WHO%20Symposium%20on%20Meaningful%20Engagement).jfif', 'BENNY PRAWIRA SIAUW', 'Steering Committee Member, WHO Symposium on Meaningful Engagement', 'Benny Prawira Siauw is a Steering Committee Member for the WHO Symposium on Meaningful Engagement. He brings expertise in youth engagement strategies and meaningful participation frameworks at the global health policy level.')">
+                     onclick="openModal('benny-prawira', 'https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20Speakers%20Photos%20and%20Titles%20/Benny%20Prawira%20(Steering%20Committee%20Member%20WHO%20Symposium%20on%20Meaningful%20Engagement).jfif', 'BENNY PRAWIRA SIAUW', 'Founder, Into The Light Indonesia', 'Benny Prawira Siauw is a global mental health activist promoting youth and marginalized community engagement in suicide prevention initiatives. He founded Into The Light Indonesia (2013), and has advanced suicide prevention efforts nationwide and internationally. Holding Masters degrees in Social Health Psychology (Unika Atma Jaya Jakarta) and Medical Anthropology (University of Oxford, Chevening Scholar), Benny collaborates extensively with universities, NGOs, and funding agencies across Australia, USA, UK, and Canada. His research focuses on social determinants and stigma surrounding suicide and mental health among marginalized populations, working to create more inclusive and accessible communities and services.')">
                     <div class="speaker-avatar" style="background-image: url('https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20Speakers%20Photos%20and%20Titles%20/Benny%20Prawira%20(Steering%20Committee%20Member%20WHO%20Symposium%20on%20Meaningful%20Engagement).jfif');"></div>
                     <h4 class="speaker-name">BENNY PRAWIRA SIAUW</h4>
-                    <p class="speaker-title">Steering Committee Member, WHO Symposium on Meaningful Engagement</p>
+                    <p class="speaker-title">Founder, Into The Light Indonesia</p>
                     <p class="speaker-bio">UN Science Summit Panelist</p>
                 </div>
 
                 <div class="speaker-card glass-card" 
-                     onclick="openModal('isaac-lara', 'https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20Speakers%20Photos%20and%20Titles%20/Isaac%20Lara%20(Lived%20Experience%20%26%20Global%20Mental%20Health%20Researcher,%20Harvard%20Medical%20School).jfif', 'ISAAC LARA', 'Lived Experience & Global Mental Health Researcher, Harvard Medical School', 'Isaac Lara is a Lived Experience & Global Mental Health Researcher at Harvard Medical School. His work focuses on integrating lived experience perspectives into mental health research and practice, particularly in global contexts.')">
+                     onclick="openModal('isaac-lara', 'https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20Speakers%20Photos%20and%20Titles%20/Isaac%20Lara%20(Lived%20Experience%20%26%20Global%20Mental%20Health%20Researcher,%20Harvard%20Medical%20School).jfif', 'ISAAC LARA', 'Lived Experience &amp; Global Mental Health Researcher, Harvard Medical School', 'Ernesto Isaac Lara is a youth wellbeing activist, lived experience researcher, and peer support advocate on a mission to create a happier, healthier global community. Rooted in his healing journey, Isaac has dedicated his early career to expanding access to peer support training and services. Currently, Isaac works at the Mental Health for All Lab at Harvard Medical School, where he leads the EMPOWER Peer Support Initiative. This endeavor aims to develop a digital, global peer support curriculum to equip those with lived experience of recovery to support others earlier in their healing journey. Additionally, Isaac furthers his mission by guiding organizations such as the World Health Organization, Global Mental Health Peer Network, Mental Health America, NAMI, Youth Move National, Stanford Psychiatry, and Lancet Psychiatry. In recognition of his advocacy and research he was awarded the 2024 Mental Health America mPower Award and 2025 NTTAC Young Adult Champion Award.')">
                     <div class="speaker-avatar" style="background-image: url('https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20Speakers%20Photos%20and%20Titles%20/Isaac%20Lara%20(Lived%20Experience%20%26%20Global%20Mental%20Health%20Researcher,%20Harvard%20Medical%20School).jfif');"></div>
                     <h4 class="speaker-name">ISAAC LARA</h4>
                     <p class="speaker-title">Lived Experience & Global Mental Health Researcher, Harvard Medical School</p>
@@ -1187,19 +1239,19 @@
 
             <!-- Breakout Session Leaders -->
             <div class="section-header" style="margin-top: var(--space-2xl);">
-                <h3 style="font-family: var(--font-display); font-size: 2rem; color: var(--neon-cyan); margin-bottom: var(--space-md);">BREAKOUT SESSION LEADERS</h3>
+                <h3 style="font-family: var(--font-display); font-size: 2rem; color: var(--neon-cyan); margin-bottom: var(--space-md);">BREAKOUT SESSION FACILITATORS</h3>
             </div>
             <div class="speakers-grid">
                 <div class="speaker-card glass-card" 
-                     onclick="openModal('nze-okoronta', 'https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20Speakers%20Photos%20and%20Titles%20/Nze%20Okoronta%20(Executive%20Director,%20Peer%20Services_%20%20Soar%20Case%20Management%20Services,%20Inc.).jfif', 'NZE OKORONTA', 'Executive Director, Peer Services, Soar Case Management Services, Inc.', 'Nze Okoronta serves as Executive Director of Peer Services at Soar Case Management Services, Inc. She leads the Mental Health Equity breakout session, focusing on dismantling barriers that prevent marginalized youth from accessing mental health support.')">
+                     onclick="openModal('nze-okoronta', 'https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20Speakers%20Photos%20and%20Titles%20/Nze%20Okoronta%20(Executive%20Director,%20Peer%20Services_%20%20Soar%20Case%20Management%20Services,%20Inc.).jfif', 'NZE OKORONTA (they/them)', 'Executive Director, Peer Services. SOAR / Solstice House Peer Respite', 'Nze Okoronta is a Peer Respite Director and Co-Executive Director of SOAR, a grassroots organization located in Wisconsin. They also offer training, technical assistance and consultation for organizations and the general public related to crisis service transformation and redesign. Nze is known for work surrounding mental health crisis services, peer run respites, peer support warmlines, crisis hotlines, suicide prevention, harm reduction and transformative mental health. Nze has been involved in and provided direct support to organizations doing work around alternative responses to mental health crisis, alternatives to policing, mobile crisis teams, civil and human rights protections, disability justice, and policy advocacy and reform. Nze has past work experience in racial health equity, housing, public health, disability access, clinical substance use counseling, and population-specific substance use care and program development for Black and Brown communities. Nze feels most whole when surrounded by trees. After many long afternoons spent at work in the community, they can be found hiking in the woods alongside their dog familiar (Pluto) or stargazing in a field.')">
                     <div class="speaker-avatar" style="background-image: url('https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20Speakers%20Photos%20and%20Titles%20/Nze%20Okoronta%20(Executive%20Director,%20Peer%20Services_%20%20Soar%20Case%20Management%20Services,%20Inc.).jfif');"></div>
-                    <h4 class="speaker-name">NZE OKORONTA</h4>
-                    <p class="speaker-title">Executive Director, Peer Services, Soar Case Management Services, Inc.</p>
+                    <h4 class="speaker-name">NZE OKORONTA (they/them)</h4>
+                    <p class="speaker-title">Executive Director, Peer Services. SOAR / Solstice House Peer Respite</p>
                     <p class="speaker-bio">Mental Health Equity Breakout Session</p>
                 </div>
 
                 <div class="speaker-card glass-card" 
-                     onclick="openModal('marx-wang', 'https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20Speakers%20Photos%20and%20Titles%20/Marx%20Wang%20(Executive%20Director,%20ForYouPage.Org)%20.jfif', 'MARX WANG', 'Executive Director, ForYouPage.Org', 'Marx Wang is the Executive Director of ForYouPage.Org. He co-leads the Social Support breakout session, focusing on fostering meaningful connections and social support systems for youth mental health and wellbeing.')">
+                     onclick="openModal('marx-wang', 'https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20Speakers%20Photos%20and%20Titles%20/Marx%20Wang%20(Executive%20Director,%20ForYouPage.Org)%20.jfif', 'MARX WANG', 'Executive Director, ForYouPage.Org', 'Marx Wang is the Executive Director of ForYouPage.Org. He co-facilitates the Social Support breakout session, focusing on fostering meaningful connections and social support systems for youth mental health and wellbeing.')">
                     <div class="speaker-avatar" style="background-image: url('https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20Speakers%20Photos%20and%20Titles%20/Marx%20Wang%20(Executive%20Director,%20ForYouPage.Org)%20.jfif');"></div>
                     <h4 class="speaker-name">MARX WANG</h4>
                     <p class="speaker-title">Executive Director, ForYouPage.Org</p>
@@ -1207,15 +1259,15 @@
                 </div>
 
                 <div class="speaker-card glass-card" 
-                     onclick="openModal('kate-barranco', 'https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20Speakers%20Photos%20and%20Titles%20/Kate%20Barranco%20(Founder,%20Conscious%20Futures%20LLC).jpeg', 'KATE BARRANCO', 'Founder, Conscious Futures LLC', 'Kate Barranco is the Founder of Conscious Futures LLC. She co-leads the Social Support breakout session, bringing expertise in conscious leadership and creating supportive environments for youth development.')">
+                     onclick="openModal('kate-barranco', 'https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20Speakers%20Photos%20and%20Titles%20/Kate%20Barranco%20(Founder,%20Conscious%20Futures%20LLC).jpeg', 'KATE BARRANCO (she/her)', 'Founder, Conscious Futures', 'Kate Barranco (she/her) is the founder of Conscious Futures, a collaborative studio at the intersection of imagination, care, and systems change. She partners with communities and organizations to design tools, narratives, and spaces that expand what people believe is possible in civic and cultural life. Kate is a human-centered designer, narrative strategist, and researcher whose work builds trauma-informed frameworks for disrupting cycles of harm and cultivating collective healing. With experience spanning global mental health nonprofits, youth-led movements, and international initiatives, she integrates lived experience and intergenerational insight to help make complexity navigable and futures more humane.')">
                     <div class="speaker-avatar" style="background-image: url('https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20Speakers%20Photos%20and%20Titles%20/Kate%20Barranco%20(Founder,%20Conscious%20Futures%20LLC).jpeg');"></div>
-                    <h4 class="speaker-name">KATE BARRANCO</h4>
-                    <p class="speaker-title">Founder, Conscious Futures LLC</p>
+                    <h4 class="speaker-name">KATE BARRANCO (she/her)</h4>
+                    <p class="speaker-title">Founder, Conscious Futures</p>
                     <p class="speaker-bio">Social Support Breakout Session</p>
                 </div>
 
                 <div class="speaker-card glass-card" 
-                     onclick="openModal('saanvi-arora', 'https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20Speakers%20Photos%20and%20Titles%20/Saanvi%20Arora%20(Founder,%20Executive%20Director,%20Youth%20Power%20Project).jfif', 'SAANVI ARORA', 'Founder & Executive Director, Youth Power Project', 'Saanvi Arora is the Founder and Executive Director of Youth Power Project. She leads the Policy & Advocacy breakout session, focusing on how grassroots advocacy and youth voices shape effective mental health policies.')">
+                     onclick="openModal('saanvi-arora', 'https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20Speakers%20Photos%20and%20Titles%20/Saanvi%20Arora%20(Founder,%20Executive%20Director,%20Youth%20Power%20Project).jfif', 'SAANVI ARORA', 'Founder &amp; Executive Director, Youth Power Project', 'Saanvi Arora is a leading youth advocate and policy expert, as well as the Executive Director of the Youth Power Project, a youth-led organization that empowers young people under 25 to inform local, state, and federal policymaking based on their own experiences and has introduced/passed over a dozen state and federal policies. She is focused on understanding the intersection between public policy, technology, and community attitudes towards health, and published a paper in the Institute for Electrical and Electronics Engineers (IEEE) in 2020 regarding the potential for the Internet of Medical Things to reduce costs and barriers associated with healthcare. She has also been recognized for her contributions to key policies improving access to reproductive, sexual, and mental healthcare for young people, and has written and/or advised numerous state and federal policies/initiatives on the subject matters. Recently, she drove the youth-led effort to write, introduce, and pass S.Res.769, declaring an adolescent mental health emergency and advancing experience-informed recommendations for state and local actors to respond, unanimously through the U.S. Senate. Overall, she is invested in bridging gaps between successful policymaking and younger generations by advocating for cultural, educational, and institutional improvements that encourage youth civic engagement and promote free expression. She is currently an undergraduate at UC Berkeley completing simultaneous Bachelors Degrees in Computer Science and Legal Studies, with a minor in public policy.')">
                     <div class="speaker-avatar" style="background-image: url('https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20Speakers%20Photos%20and%20Titles%20/Saanvi%20Arora%20(Founder,%20Executive%20Director,%20Youth%20Power%20Project).jfif');"></div>
                     <h4 class="speaker-name">SAANVI ARORA</h4>
                     <p class="speaker-title">Founder & Executive Director, Youth Power Project</p>
@@ -1223,8 +1275,8 @@
                 </div>
 
                 <div class="speaker-card glass-card" 
-                     onclick="openModal('emmy-egulu', 'https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20Speakers%20Photos%20and%20Titles%20/Emmy%20Egulu%20(Public%20Policy%20Analyst,%20CSA%20Group).jpg', 'EMMY EGULU', 'Public Policy Analyst, CSA Group', 'Emmy Egulu is a Public Policy Analyst at CSA Group. She contributes to the Policy & Advocacy breakout session, bringing expertise in policy analysis and development to advance youth mental health at the systemic level.')">
-                    <div class="speaker-avatar" style="background-image: url('https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20Speakers%20Photos%20and%20Titles%20/Emmy%20Egulu%20(Public%20Policy%20Analyst,%20CSA%20Group).jpg');"></div>
+                     onclick="openModal('emmy-egulu', '2025 Speakers Photos and Titles /EMMY EGULU.jpeg', 'EMMY EGULU', 'Public Policy Analyst, CSA Group', 'Emmy Egulu is a Public Policy Analyst at CSA Group. She contributes to the Policy & Advocacy breakout session, bringing expertise in policy analysis and development to advance youth mental health at the systemic level.')">
+                    <div class="speaker-avatar" style="background-image: url('2025 Speakers Photos and Titles /EMMY EGULU.jpeg');"></div>
                     <h4 class="speaker-name">EMMY EGULU</h4>
                     <p class="speaker-title">Public Policy Analyst, CSA Group</p>
                     <p class="speaker-bio">Policy & Advocacy Breakout Session</p>
@@ -1239,9 +1291,9 @@
                 </div>
 
                 <div class="speaker-card glass-card" 
-                     onclick="openModal('ross-layton', 'https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20Speakers%20Photos%20and%20Titles%20/Ross%20Layton%20(Equal%20Justice%20Works%20Fellow,%20The%20Bazelon%20Center%20for%20Mental%20Health%20Law).jfif', 'ROSS LAYTON', 'Equal Justice Works Fellow, The Bazelon Center for Mental Health Law', 'Ross Layton is an Equal Justice Works Fellow at The Bazelon Center for Mental Health Law. He contributes to the Mental Health Equity breakout session, focusing on legal advocacy and dismantling systemic barriers that prevent marginalized youth from accessing mental health care.')">
+                     onclick="openModal('ross-layton', 'https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20Speakers%20Photos%20and%20Titles%20/Ross%20Layton%20(Equal%20Justice%20Works%20Fellow,%20The%20Bazelon%20Center%20for%20Mental%20Health%20Law).jfif', 'ROSS LAYTON (he/him)', 'Equal Justice Works Fellow, The Bazelon Center for Mental Health Law', 'Ross Layton is an Equal Justice Works Fellow at the David L. Bazelon Center for Mental Health Law, which since 1972 has advocated for the civil rights of Americans with mental disabilities. Ross&apos;s Fellowship, sponsored by Johnson &amp; Johnson and Patterson Belknap Webb &amp; Tyler LLP, serves college and university students with mental health disabilities, defending their freedom from discrimination in higher education. Ross holds a J.D. from Washington University School of Law, where he also earned a Certificate in Public Interest Law and the Equal Justice Works Award for commitment to pro bono and public service, and a B.A. from Swarthmore College.')">
                     <div class="speaker-avatar" style="background-image: url('https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20Speakers%20Photos%20and%20Titles%20/Ross%20Layton%20(Equal%20Justice%20Works%20Fellow,%20The%20Bazelon%20Center%20for%20Mental%20Health%20Law).jfif');"></div>
-                    <h4 class="speaker-name">ROSS LAYTON</h4>
+                    <h4 class="speaker-name">ROSS LAYTON (he/him)</h4>
                     <p class="speaker-title">Equal Justice Works Fellow, The Bazelon Center for Mental Health Law</p>
                     <p class="speaker-bio">Mental Health Equity Breakout Session</p>
                 </div>
@@ -1278,46 +1330,88 @@
 
             <div class="schedule-timeline">
                 <div class="schedule-item glass-card">
-                    <div class="schedule-time">10:00 AM - 10:15 AM</div>
-                    <h3 class="schedule-title">Welcome & Opening</h3>
-                    <p class="schedule-description">Event opening, community agreements, and ice breakers led by Arc Telos Saint Amour</p>
+                    <div class="schedule-time">10:00 AM - 10:10 AM</div>
+                    <h3 class="schedule-title">Event Opening</h3>
+                    <p class="schedule-description">Community agreements and ice breakers led by Arc Telos Saint Amour</p>
+                </div>
+
+                <div class="schedule-item glass-card">
+                    <div class="schedule-time">10:10 AM - 10:15 AM</div>
+                    <h3 class="schedule-title">Welcome to FYP 2025 Event</h3>
+                    <p class="schedule-description">Led by Arc Telos Saint Amour</p>
+                </div>
+
+                <div class="schedule-item glass-card">
+                    <div class="schedule-time">10:15 AM - 10:20 AM</div>
+                    <h3 class="schedule-title">Introduction of Keynote Speaker</h3>
+                    <p class="schedule-description">Led by Arc Telos Saint Amour</p>
                 </div>
 
                 <div class="schedule-item glass-card">
                     <div class="schedule-time">10:20 AM - 10:35 AM</div>
-                    <h3 class="schedule-title">Keynote Address</h3>
+                    <h3 class="schedule-title">UN Science Summit Keynote Speech</h3>
                     <p class="schedule-description"><strong>Judah Njoroge</strong> - "Community and Mental Health: Reimagining Meaningful Youth Engagement for Global Wellbeing"</p>
                 </div>
 
                 <div class="schedule-item glass-card">
                     <div class="schedule-time">10:35 AM - 11:20 AM</div>
                     <h3 class="schedule-title">UN Science Summit Panel</h3>
-                    <p class="schedule-description">Community and Mental Health: Reimagining Meaningful Youth Engagement for Global Wellbeing<br><em>Panelists: Judah Njoroge, Benny Prawira Siauw, Isaac Lara, Anpotowin Jensen | Moderator: Arc Telos Saint Amour</em></p>
+                    <p class="schedule-description">Community and Mental Health: Reimagining Meaningful Youth Engagement for Global Wellbeing<br><em>Panelists: Judah Njoroge, Benny Prawira Siauw, Isaac Lara, Anpotowin Jensen<br>Moderator: Arc Telos Saint Amour</em></p>
                 </div>
 
                 <div class="schedule-item glass-card">
+                    <div class="schedule-time">11:20 AM - 11:25 AM</div>
+                    <h3 class="schedule-title">Transition to Breakout Sessions</h3>
+                    <p class="schedule-description">Led by Arc Telos Saint Amour</p>
+                </div>
+
+                <div class="schedule-item glass-card" style="cursor: pointer;" onclick="scrollToSection('breakout-sessions')">
                     <div class="schedule-time">11:25 AM - 12:15 PM</div>
                     <h3 class="schedule-title">Breakout Sessions</h3>
-                    <p class="schedule-description">Choose from three concurrent sessions focusing on equity, social support, and policy advocacy</p>
+                    <p class="schedule-description">Choose from three concurrent sessions focusing on equity, social support, and policy advocacy<br><em>Click to see session details below</em></p>
                 </div>
 
                 <div class="schedule-item glass-card">
+                    <div class="schedule-time">12:15 PM - 12:25 PM</div>
+                    <h3 class="schedule-title">Reflections from Breakout Sessions</h3>
+                    <p class="schedule-description">Led by Alyna Lim</p>
+                </div>
+
+                <div class="schedule-item glass-card">
+                    <div class="schedule-time">12:25 PM - 12:35 PM</div>
+                    <h3 class="schedule-title">Transition + Raffle Draw</h3>
+                    <p class="schedule-description">Led by Alyna Lim</p>
+                </div>
+
+                <div class="schedule-item glass-card" style="cursor: pointer;" onclick="scrollToSection('partner-led-sessions')">
                     <div class="schedule-time">12:35 PM - 1:25 PM</div>
                     <h3 class="schedule-title">Partner-Led Sessions</h3>
-                    <p class="schedule-description">Concurrent sessions led by Youth Move National, Youth Power Project, and Born This Way Foundation</p>
+                    <p class="schedule-description">Concurrent sessions led by Youth Move National, Youth Power Project, and Channel Kindness (Born This Way Foundation)<br><em>Click to see session details below</em></p>
                 </div>
 
                 <div class="schedule-item glass-card">
-                    <div class="schedule-time">1:30 PM - 2:00 PM</div>
-                    <h3 class="schedule-title">Closing Circle & Reflections</h3>
-                    <p class="schedule-description">Final reflections, media moments, and announcements for FYP 2026</p>
+                    <div class="schedule-time">1:25 PM - 1:30 PM</div>
+                    <h3 class="schedule-title">Reflections from Breakout Sessions</h3>
+                    <p class="schedule-description">Led by Judah Njoroge</p>
+                </div>
+
+                <div class="schedule-item glass-card">
+                    <div class="schedule-time">1:30 PM - 1:40 PM</div>
+                    <h3 class="schedule-title">Acknowledgements</h3>
+                    <p class="schedule-description">Led by Dr. Oluwaferanmi Omitoyin</p>
+                </div>
+
+                <div class="schedule-item glass-card">
+                    <div class="schedule-time">1:40 PM - 2:00 PM</div>
+                    <h3 class="schedule-title">Closing of FYP 2025 Summit</h3>
+                    <p class="schedule-description">Led by Dr. Oluwaferanmi Omitoyin</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Breakout Sessions -->
-    <section class="section">
+    <section id="breakout-sessions" class="section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">BREAKOUT SESSIONS</h2>
@@ -1326,31 +1420,31 @@
 
             <div class="breakout-grid">
                 <div class="breakout-card glass-card" 
-                     onclick="openModal('breakout-1a', 'https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/Breakout%20Session/Breakout%20Session%201A.png', 'Breaking Barriers and Promoting Youth Mental Health Equity', 'Moderator: Alyna Lim | Panelists: Nze Okoronta, Ross Layton, Dr. Sean Thum', 'Mental health is a universal human right. Yet, too many young people face significant barriers, from stigma to cost, in accessing mental healthcare. This conversation focuses on dismantling these obstacles and forging pathways to ensure every youth, regardless of their background, has an equitable chance to thrive mentally and emotionally. Topics include cultural stigma, systemic bias, digital equity gaps, and policy solutions for systemic change.')">
+                     onclick="openModal('breakout-1a', 'https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/Breakout%20Session/Breakout%20Session%201A.png', 'Breaking Barriers and Promoting Youth Mental Health Equity', 'Moderator: Alyna Lim&lt;br&gt;Panelists: Nze Okoronta, Ross Layton, Dr. Sean Thum', 'Mental health is a universal human right. Yet, too many young people face significant barriers, from stigma to cost, in accessing mental healthcare. This conversation focuses on dismantling these obstacles and forging pathways to ensure every youth, regardless of their background, has an equitable chance to thrive mentally and emotionally. Topics include cultural stigma, systemic bias, digital equity gaps, and policy solutions for systemic change.')">
                     <div class="breakout-image" style="background-image: url('https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/Breakout%20Session/Breakout%20Session%201A.png');"></div>
                     <div class="breakout-content">
                         <h3 class="breakout-title">Breaking Barriers and Promoting Youth Mental Health Equity</h3>
-                        <p class="breakout-moderator">Moderator: Alyna Lim | Panelists: Nze Okoronta, Ross Layton, Dr. Sean Thum</p>
+                        <p class="breakout-moderator">Moderator: Alyna Lim<br>Panelists: Nze Okoronta, Ross Layton, Dr. Sean Thum</p>
                         <p class="breakout-description">Dismantling obstacles and forging pathways to ensure every youth has an equitable chance to thrive mentally and emotionally.</p>
                     </div>
                 </div>
 
                 <div class="breakout-card glass-card" 
-                     onclick="openModal('breakout-1b', 'https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/Breakout%20Session/Breakout%20Session%201B.png', 'The Power of Connection: Fostering Social Support for Youth Wellbeing', 'Moderator: Glen Koh | Panelists: Marx Wang, Kate Barranco, Mercy Mkandawire', 'Strong social connections are a vital buffer against life\'s challenges. A sense of community and belonging profoundly shapes a young person\'s resilience and mental health. This discussion explores how we can intentionally cultivate environments, in families, schools, and communities, where meaningful relationships flourish and provide a crucial safety net for youth wellbeing. Topics include designing supportive spaces, inclusive environments for marginalized youth, the role of trusted adults, and distinguishing authentic connections from superficial interactions.')">
+                     onclick="openModal('breakout-1b', 'https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/Breakout%20Session/Breakout%20Session%201B.png', 'The Power of Connection: Fostering Social Support for Youth Wellbeing', 'Moderator: Glen Koh&lt;br&gt;Panelists: Marx Wang, Kate Barranco, Mercy Mkandawire', 'Strong social connections are a vital buffer against life\'s challenges. A sense of community and belonging profoundly shapes a young person\'s resilience and mental health. This discussion explores how we can intentionally cultivate environments, in families, schools, and communities, where meaningful relationships flourish and provide a crucial safety net for youth wellbeing. Topics include designing supportive spaces, inclusive environments for marginalized youth, the role of trusted adults, and distinguishing authentic connections from superficial interactions.')">
                     <div class="breakout-image" style="background-image: url('https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/Breakout%20Session/Breakout%20Session%201B.png');"></div>
                     <div class="breakout-content">
                         <h3 class="breakout-title">The Power of Connection: Fostering Social Support for Youth Wellbeing</h3>
-                        <p class="breakout-moderator">Moderator: Glen Koh | Panelists: Marx Wang, Kate Barranco, Mercy Mkandawire</p>
+                        <p class="breakout-moderator">Moderator: Glen Koh<br>Panelists: Marx Wang, Kate Barranco, Mercy Mkandawire</p>
                         <p class="breakout-description">Exploring how to cultivate environments where meaningful relationships flourish and provide crucial safety nets.</p>
                     </div>
                 </div>
 
                 <div class="breakout-card glass-card" 
-                     onclick="openModal('breakout-1c', 'https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/Breakout%20Session/Breakout%20Session%201C.png', 'Policy, Action, and Youth Mental Health', 'Moderator: Ronit Chakraborty | Panelists: Saanvi Arora, Connor Dalgaard, Emmy Egulu', 'Why grassroots advocacy matters for our global future and how local voices shape effective policies. This session explores the critical intersection of policy development and youth mental health advocacy, focusing on how young people can drive meaningful change at local, national, and global levels through strategic action and sustained advocacy efforts.')">
+                     onclick="openModal('breakout-1c', 'https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/Breakout%20Session/Breakout%20Session%201C.png', 'Policy, Action, and Youth Mental Health: Why Grassroots Advocacy Matters for our Global Future', 'Moderator: Ronit Chakraborty&lt;br&gt;Panelists: Saanvi Arora, Connor Dalgaard, Emmy Egulu', 'Why grassroots advocacy matters for our global future and how local voices shape effective policies. This session explores the critical intersection of policy development and youth mental health advocacy, focusing on how young people can drive meaningful change at local, national, and global levels through strategic action and sustained advocacy efforts.')">
                     <div class="breakout-image" style="background-image: url('https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/Breakout%20Session/Breakout%20Session%201C.png');"></div>
                     <div class="breakout-content">
-                        <h3 class="breakout-title">Policy, Action, and Youth Mental Health</h3>
-                        <p class="breakout-moderator">Moderator: Ronit Chakraborty | Panelists: Saanvi Arora, Connor Dalgaard, Emmy Egulu</p>
+                        <h3 class="breakout-title">Policy, Action, and Youth Mental Health: Why Grassroots Advocacy Matters for our Global Future</h3>
+                        <p class="breakout-moderator">Moderator: Ronit Chakraborty<br>Panelists: Saanvi Arora, Connor Dalgaard, Emmy Egulu</p>
                         <p class="breakout-description">Why grassroots advocacy matters for our global future and how local voices shape effective policies.</p>
                     </div>
                 </div>
@@ -1359,7 +1453,7 @@
     </section>
 
     <!-- Partner-Led Sessions -->
-    <section class="section">
+    <section id="partner-led-sessions" class="section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">PARTNER-LED SESSIONS</h2>
@@ -1367,31 +1461,34 @@
             </div>
 
             <div class="breakout-grid">
-                <div class="breakout-card glass-card">
-                    <div class="breakout-image" style="background-image: url('https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/Partners/Partner%204.png');"></div>
+                <div class="breakout-card glass-card" 
+                     onclick="openModal('youth-move-session', 'Partners/Youth Move National (Partner).png', 'Youth Move National Session', 'Facilitated by: Youth Move National', 'Youth-driven mental health advocacy session focusing on organizing strategies and systemic change. Youth Move National champions youth-driven mental health advocacy across the United States, sharing their expertise in youth organizing and advocacy strategies for systemic change in mental health policy.')">
+                    <div class="breakout-image" style="background-image: url('Partners/Youth Move National (Partner).png');"></div>
                     <div class="breakout-content">
                         <h3 class="breakout-title">Youth Move National Session</h3>
-                        <p class="breakout-moderator">Led by: Youth Move National</p>
+                        <p class="breakout-moderator">Facilitated by: Youth Move National</p>
                         <p class="breakout-description">Youth-driven mental health advocacy session focusing on organizing strategies and systemic change.</p>
                     </div>
                 </div>
 
-                <div class="breakout-card glass-card">
-                    <div class="breakout-image" style="background-image: url('https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/Partners/Partner%201.png');"></div>
+                <div class="breakout-card glass-card" 
+                     onclick="openModal('youth-power-session', 'Partners/Youth Power Project (Partner).avif', 'Youth Power Project Session', 'Facilitated by: Youth Power Project', 'Empowering youth through advocacy and leadership development with practical organizing skills. Youth Power Project is dedicated to empowering youth through advocacy and leadership development, bringing expertise in youth-led organizing and building youth advocacy capacity.')">
+                    <div class="breakout-image" style="background-image: url('Partners/Youth Power Project (Partner).avif');"></div>
                     <div class="breakout-content">
                         <h3 class="breakout-title">Youth Power Project Session</h3>
-                        <p class="breakout-moderator">Led by: Youth Power Project</p>
+                        <p class="breakout-moderator">Facilitated by: Youth Power Project</p>
                         <p class="breakout-description">Empowering youth through advocacy and leadership development with practical organizing skills.</p>
                     </div>
                 </div>
 
-                <div class="breakout-card glass-card">
+                <div class="breakout-card glass-card" 
+                     onclick="openModal('channel-kindness-session', 'https://via.placeholder.com/400x200/ff0099/ffffff?text=Channel+Kindness', 'Channel Kindness Session', 'Facilitated by: Channel Kindness; Born This Way Foundation', 'Promoting kindness and mental wellness through community building and positive action initiatives. Channel Kindness, Born This Way Foundation focuses on supporting the wellness of young people and empowering them to create a kinder and braver world through their Channel Kindness platform.')">
                     <div class="breakout-image" style="background: linear-gradient(135deg, var(--neon-pink), var(--cosmic-pink)); display: flex; align-items: center; justify-content: center; color: white; font-family: var(--font-display); font-weight: 600; text-align: center; padding: var(--space-md);">
-                        <span>Born This Way Foundation</span>
+                        <span>Channel Kindness</span>
                     </div>
                     <div class="breakout-content">
                         <h3 class="breakout-title">Channel Kindness Session</h3>
-                        <p class="breakout-moderator">Led by: Born This Way Foundation</p>
+                        <p class="breakout-moderator">Facilitated by: Channel Kindness; Born This Way Foundation</p>
                         <p class="breakout-description">Promoting kindness and mental wellness through community building and positive action initiatives.</p>
                     </div>
                 </div>
@@ -1491,13 +1588,20 @@
                     <p class="committee-role">Operations Chair (he/him)</p>
                     <a href="https://www.linkedin.com/in/judah-njoroge-289a84179/" class="linkedin-link" target="_blank" onclick="event.stopPropagation();">LinkedIn Profile</a>
                 </div>
+
+                <div class="committee-card glass-card" 
+                     onclick="openModal('ronit-chakraborty', 'https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20FYP%20Event%20Committee%20Pictures/Ronit%20Chakraborty%20(Operations).png', 'RONIT CHAKRABORTY', 'Operations Chair', 'Ronit Chakraborty serves as Operations Chair for FYP Event 2025, contributing to the operational excellence and coordination that makes this global youth mental health summit possible. They bring dedication and organizational skills to ensure seamless execution of this important event.')">
+                    <div class="committee-avatar" style="background-image: url('https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/2025%20FYP%20Event%20Committee%20Pictures/Ronit%20Chakraborty%20(Operations).png');"></div>
+                    <h4 class="committee-name">RONIT CHAKRABORTY</h4>
+                    <p class="committee-role">Operations Chair</p>
+                    <a href="https://www.linkedin.com/in/ronit-chakraborty-445051301/" class="linkedin-link" target="_blank" onclick="event.stopPropagation();">LinkedIn Profile</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Partners Section -->
-    <section id="partners" class="section">
-        <div class="container">
+    <section id="partners" class="section" style="padding-bottom: var(--space-lg);">\n        <div class="container">
             <div class="section-header">
                 <h2 class="section-title">OUR PARTNERS</h2>
                 <p class="section-subtitle">Working together to amplify youth voices in mental health</p>
@@ -1505,8 +1609,8 @@
 
             <div class="partners-grid">
                 <div class="partner-card glass-card" 
-                     onclick="openModal('youth-power-project', 'https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/Partners/Partner%201.png', 'YOUTH POWER PROJECT', 'Partner Organization', 'Youth Power Project is dedicated to empowering youth through advocacy and leadership development. As a key partner of FYP Event 2025, they bring expertise in youth-led organizing and will be leading one of the Partner-Led Sessions during the summit, focusing on building youth advocacy capacity.')">
-                    <div class="partner-logo" style="background-image: url('https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/Partners/Partner%201.png');"></div>
+                     onclick="openModal('youth-power-project', 'Partners/Youth Power Project (Partner).avif', 'YOUTH POWER PROJECT', 'Partner Organization', 'Youth Power Project is dedicated to empowering youth through advocacy and leadership development. As a key partner of FYP Event 2025, they bring expertise in youth-led organizing and will be facilitating one of the Partner-Led Sessions during the summit, focusing on building youth advocacy capacity.')">
+                    <div class="partner-logo" style="background-image: url('Partners/Youth Power Project (Partner).avif');"></div>
                     <h4 class="partner-name">YOUTH POWER PROJECT</h4>
                     <p class="breakout-description">Empowering youth through advocacy and leadership development</p>
                 </div>
@@ -1527,8 +1631,8 @@
                 </div>
 
                 <div class="partner-card glass-card" 
-                     onclick="openModal('youth-move-national', 'https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/Partners/Partner%204.png', 'YOUTH MOVE NATIONAL', 'Partner Organization', 'Youth Move National champions youth-driven mental health advocacy across the United States. As a key partner, they will be leading one of the Partner-Led Sessions during the summit, sharing their expertise in youth organizing and advocacy strategies for systemic change in mental health policy.')">
-                    <div class="partner-logo" style="background-image: url('https://raw.githubusercontent.com/joannafg/FYP2025EventProfilePictures/main/Partners/Partner%204.png');"></div>
+                     onclick="openModal('youth-move-national', 'Partners/Youth Move National (Partner).png', 'YOUTH MOVE NATIONAL', 'Partner Organization', 'Youth Move National champions youth-driven mental health advocacy across the United States. As a key partner, they will be facilitating one of the Partner-Led Sessions during the summit, sharing their expertise in youth organizing and advocacy strategies for systemic change in mental health policy.')">
+                    <div class="partner-logo" style="background-image: url('Partners/Youth Move National (Partner).png');"></div>
                     <h4 class="partner-name">YOUTH MOVE NATIONAL</h4>
                     <p class="breakout-description">Youth-driven mental health advocacy</p>
                 </div>
@@ -1548,8 +1652,8 @@
             
             modalAvatar.style.backgroundImage = `url('${imageUrl}')`;
             modalName.textContent = name;
-            modalTitle.textContent = title;
-            modalDescription.textContent = description;
+            modalTitle.innerHTML = title.replace(/&lt;br&gt;/g, '<br>'); // Convert HTML entities back to HTML
+            modalDescription.innerHTML = description.replace(/&lt;br&gt;/g, '<br>'); // Convert HTML entities back to HTML
             
             modal.style.display = 'block';
         }
@@ -1557,6 +1661,11 @@
         function closeModal() {
             const modal = document.getElementById('speakerModal');
             modal.style.display = 'none';
+        }
+
+        // Function to open image in new window
+        function openImageInNewWindow(imageUrl) {
+            window.open(imageUrl, '_blank');
         }
 
         // Close modal when clicking outside of it
@@ -1604,6 +1713,20 @@
                     });
                 });
             }
+
+            // Make all images with background-image clickable
+            const clickableElements = document.querySelectorAll('.speaker-avatar, .committee-avatar, .partner-logo, .breakout-image, .media-image, .modal-avatar');
+            clickableElements.forEach(element => {
+                element.classList.add('clickable-image');
+                element.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Prevent modal from opening when clicking image
+                    const backgroundImage = window.getComputedStyle(element).backgroundImage;
+                    const imageUrl = backgroundImage.slice(5, -2); // Remove 'url("' and '")'
+                    if (imageUrl && imageUrl !== 'none') {
+                        openImageInNewWindow(imageUrl);
+                    }
+                });
+            });
         });
 
         // Intersection Observer for scroll animations
