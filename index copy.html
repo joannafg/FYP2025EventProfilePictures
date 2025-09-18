@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FYP Event 2025 | Beyond Awareness: Taking Action for Youth Mental Health</title>
+    <meta name="description" content="Join us September 20th, 2025 for FYP Event 2025 - Beyond Awareness: Taking Action for Youth Mental Health. A virtual event empowering youth voices.">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Cosmic Color Palette - Matching Poster */
+            --cosmic-purple: #1a0033;
+            --cosmic-purple-light: #2d1b4e;
+            --cosmic-blue: #0066cc;
+            --cosmic-blue-light: #4d9ef7;
+            --cosmic-cyan: #00ffff;
+            --cosmic-pink: #ff00ff;
+            --cosmic-violet: #6600cc;
+            --cosmic-indigo: #4b0082;
+            
+            /* Accent Colors */
+            --neon-cyan: #00ccff;
+            --neon-pink: #ff0099;
+            --neon-purple: #9966ff;
+            --electric-blue: #0099ff;
+            
+            /* Neutral Colors for Cosmic Theme */
+            --cosmic-white: #ffffff;
+            --cosmic-silver: #e6e6fa;
+            --cosmic-gray: rgba(255, 255, 255, 0.8);
+            --cosmic-dark: rgba(0, 0, 0, 0.3);
+            
+            /* Typography - Cosmic Fonts */
+            --font-primary: 'Space Grotesk', sans-serif;
+            --font-display: 'Orbitron', monospace;
+            
+            /* Spacing */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-2xl: 4rem;
+            
+            /* Border Radius */
+            --radius-sm: 0.5rem;
+            --radius-md: 1rem;
+            --radius-lg: 1.5rem;
+            --radius-xl: 2rem;
+            --radius-full: 50%;
+            
+            /* Cosmic Effects */
+            --glow-cyan: 0 0 20px var(--neon-cyan);
+            --glow-pink: 0 0 20px var(--neon-pink);
+            --glow-purple: 0 0 20px var(--neon-purple);
+            --shadow-cosmic: 0 8px 32px rgba(0, 102, 204, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            line-height: 1.6;
+            color: var(--cosmic-white);
+            background: var(--cosmic-purple);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Cosmic Background Animation */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(135deg, var(--cosmic-purple) 0%, var(--cosmic-violet) 25%, var(--cosmic-blue) 50%, var(--cosmic-indigo) 75%, var(--cosmic-purple) 100%),
+                radial-gradient(circle at 20% 50%, var(--cosmic-pink) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, var(--cosmic-cyan) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, var(--cosmic-blue) 0%, transparent 50%);
+            z-index: -2;
+            animation: cosmicShift 20s ease-in-out infinite alternate;
+        }
+
+        /* Starfield Effect */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(2px 2px at 20px 30px, var(--cosmic-white), transparent),
+                radial-gradient(2px 2px at 40px 70px, var(--cosmic-cyan), transparent),
+                radial-gradient(1px 1px at 90px 40px, var(--cosmic-white), transparent),
+                radial-gradient(1px 1px at 130px 80px, var(--cosmic-pink), transparent),
+                radial-gradient(2px 2px at 160px 30px, var(--cosmic-white), transparent),
+                radial-gradient(1px 1px at 200px 60px, var(--cosmic-cyan), transparent),
+                radial-gradient(2px 2px at 240px 90px, var(--cosmic-white), transparent);
+            background-repeat: repeat;
+            background-size: 300px 200px;
+            z-index: -1;
+            animation: twinkle 4s ease-in-out infinite alternate, drift 60s linear infinite;
+        }
+
+        @keyframes cosmicShift {
+            0% { transform: rotate(0deg) scale(1); }
+            100% { transform: rotate(1deg) scale(1.02); }
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes drift {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-300px); }
+        }
+
+        /* Floating Elements */
+        .cosmic-orb {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--neon-cyan) 0%, transparent 70%);
+            animation: float 6s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .cosmic-orb:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .cosmic-orb:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            right: 15%;
+            background: radial-gradient(circle, var(--neon-pink) 0%, transparent 70%);
+            animation-delay: 2s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+            position: relative;
+            z-index: 1;
+        }
+
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+            gap: var(--space-xs);
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--neon-cyan), var(--electric-blue));
+            color: var(--cosmic-purple);
+            box-shadow: var(--glow-cyan);
+            border-color: var(--neon-cyan);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 30px var(--neon-cyan);
+            color: var(--cosmic-purple);
+            text-decoration: none;
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--neon-pink), var(--cosmic-pink));
+            color: var(--cosmic-white);
+            box-shadow: var(--glow-pink);
+            border-color: var(--neon-pink);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 30px var(--neon-pink);
+            color: var(--cosmic-white);
+            text-decoration: none;
+        }
+
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--cosmic-white);
+            border: 2px solid var(--neon-purple);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-outline:hover {
+            background: var(--neon-purple);
+            color: var(--cosmic-white);
+            text-decoration: none;
+            box-shadow: var(--glow-purple);
+        }
+
+        /* Header Navigation */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(26, 0, 51, 0.9);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-sm) 0;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--neon-cyan);
+            text-decoration: none;
+            text-shadow: 0 0 10px var(--neon-cyan);
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: var(--space-lg);
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--cosmic-silver);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background: var(--neon-cyan);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover {
+            color: var(--neon-cyan);
+            text-shadow: 0 0 5px var(--neon-cyan);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: var(--space-lg) 0;
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .cosmic-orb {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .welcome-text {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 400;
+            color: var(--neon-cyan);
+            text-shadow: 0 0 15px var(--neon-cyan);
+            margin-bottom: var(--space-xs);
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            margin-bottom: var(--space-sm);
+            line-height: 1.1;
+            text-shadow: 0 0 20px var(--neon-cyan);
+            background: linear-gradient(135deg, var(--cosmic-white), var(--neon-cyan));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            margin-bottom: var(--space-md);
+            color: var(--cosmic-silver);
+            font-weight: 300;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            justify-content: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .event-info-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: var(--radius-xl);
+            padding: var(--space-lg);
+            margin-top: var(--space-xl);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            box-shadow: var(--shadow-cosmic);
+        }
+
+        .event-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-lg);
+            margin-bottom: var(--space-lg);
+        }
+
+        .info-item {
+            text-align: center;
+        }
+
+        .info-label {
+            font-size: 0.875rem;
+            color: var(--neon-cyan);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: var(--space-xs);
+            font-family: var(--font-display);
+        }
+
+        .info-value {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--cosmic-white);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: var(--space-md) 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 800;
+            color: var(--cosmic-white);
+            margin-bottom: var(--space-sm);
+            text-shadow: 0 0 15px var(--neon-purple);
+            letter-spacing: 1px;
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            color: var(--cosmic-silver);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Glass Morphism Effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-cosmic);
+        }
+
+        /* Speaker Cards */
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .speaker-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border-radius: var(--radius-xl);
+            padding: var(--space-lg);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .speaker-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+            opacity: 0;
+        }
+
+        .speaker-card:hover::before {
+            opacity: 1;
+            transform: rotate(45deg) translate(50%, 50%);
+        }
+
+        .speaker-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 255, 255, 0.3);
+            border-color: var(--neon-cyan);
+        }
+
+        .speaker-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto var(--space-md);
+            background: var(--cosmic-dark);
+            background-size: cover;
+            background-position: center;
+            border: 3px solid var(--neon-cyan);
+            box-shadow: 0 0 20px var(--neon-cyan);
+            position: relative;
+            z-index: 1;
+        }
+
+        .speaker-name {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--cosmic-white);
+            margin-bottom: var(--space-xs);
+            position: relative;
+            z-index: 1;
+        }
+
+        .speaker-title {
+            color: var(--neon-cyan);
+            font-weight: 500;
+            margin-bottom: var(--space-sm);
+            position: relative;
+            z-index: 1;
+        }
+
+        .speaker-bio {
+            color: var(--cosmic-silver);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Keynote Speaker Special Treatment */
+        .keynote-speaker {
+            grid-column: 1 / -1;
+            max-width: 600px;
+            margin: 0 auto var(--space-xl);
+            border: 2px solid var(--neon-pink);
+            box-shadow: 0 0 30px var(--neon-pink);
+        }
+
+        .keynote-speaker .speaker-avatar {
+            width: 150px;
+            height: 150px;
+            border-color: var(--neon-pink);
+            box-shadow: 0 0 25px var(--neon-pink);
+        }
+
+        .keynote-speaker .speaker-name {
+            font-size: 1.5rem;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, var(--cosmic-purple), var(--cosmic-violet));
+            margin: 5% auto;
+            padding: var(--space-xl);
+            border-radius: var(--radius-xl);
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            border: 2px solid var(--neon-cyan);
+            box-shadow: 0 0 50px var(--neon-cyan);
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        /* Custom scrollbar for modal */
+        .modal-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .modal-content::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-sm);
+        }
+
+        .modal-content::-webkit-scrollbar-thumb {
+            background: var(--neon-cyan);
+            border-radius: var(--radius-sm);
+        }
+
+        .modal-content::-webkit-scrollbar-thumb:hover {
+            background: var(--electric-blue);
+        }
+
+        @keyframes modalSlideIn {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .close {
+            color: var(--cosmic-silver);
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .close:hover {
+            color: var(--neon-pink);
+            text-shadow: 0 0 10px var(--neon-pink);
+        }
+
+        .modal-avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto var(--space-lg);
+            background-size: cover;
+            background-position: center;
+            border: 4px solid var(--neon-cyan);
+            box-shadow: 0 0 30px var(--neon-cyan);
+        }
+
+        .modal-name {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--cosmic-white);
+            text-align: center;
+            margin-bottom: var(--space-sm);
+            text-shadow: 0 0 10px var(--neon-cyan);
+        }
+
+        .modal-title {
+            color: var(--neon-cyan);
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: var(--space-lg);
+            font-size: 1.1rem;
+        }
+
+        .modal-description {
+            color: var(--cosmic-silver);
+            line-height: 1.6;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        /* Clickable image styles */
+        .clickable-image {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .clickable-image:hover {
+            transform: scale(1.02);
+            filter: brightness(1.1);
+        }
+
+        .clickable-image::after {
+            content: '🔗';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px;
+            border-radius: 50%;
+            font-size: 12px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .clickable-image:hover::after {
+            opacity: 1;
+        }
+
+        /* Schedule */
+        .schedule-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .agenda-navigation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+            padding: var(--space-sm);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-btn {
+            background: linear-gradient(135deg, var(--neon-cyan), var(--electric-blue));
+            color: var(--cosmic-purple);
+            border: none;
+            border-radius: var(--radius-full);
+            width: 45px;
+            height: 45px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--glow-cyan);
+            font-family: var(--font-display);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 30px var(--neon-cyan);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: var(--glow-cyan);
+        }
+
+        .agenda-counter {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--cosmic-white);
+            text-shadow: 0 0 10px var(--neon-cyan);
+            letter-spacing: 1px;
+        }
+
+        .schedule-item {
+            position: relative;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border-radius: var(--radius-lg);
+            padding: var(--space-md);
+            margin-bottom: var(--space-md);
+            border-left: 4px solid var(--neon-purple);
+            transition: all 0.3s ease;
+        }
+
+        .agenda-item {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .agenda-item.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .schedule-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(153, 102, 255, 0.3);
+        }
+
+        .schedule-time {
+            color: var(--neon-cyan);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: var(--space-xs);
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .schedule-title {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--cosmic-white);
+            margin-bottom: var(--space-xs);
+        }
+
+        .schedule-description {
+            color: var(--cosmic-silver);
+            line-height: 1.4;
+            font-size: 0.9rem;
+        }
+
+        .breakout-sessions-list {
+            margin-top: var(--space-sm);
+            padding: var(--space-sm);
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+        }
+
+        .breakout-session-item {
+            margin-bottom: var(--space-sm);
+            padding-bottom: var(--space-sm);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .breakout-session-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .breakout-session-item h4 {
+            color: var(--neon-cyan);
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+        }
+
+        .breakout-session-item p {
+            color: var(--cosmic-silver);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Breakout Sessions */
+        .breakout-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+        }
+
+        .breakout-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+        }
+
+        .breakout-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 204, 255, 0.2);
+            border-color: var(--electric-blue);
+        }
+
+        .breakout-image {
+            width: 100%;
+            height: 200px;
+            background: var(--cosmic-dark);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+        }
+
+        .breakout-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent, rgba(26, 0, 51, 0.8));
+        }
+
+        .breakout-content {
+            padding: var(--space-lg);
+        }
+
+        .breakout-title {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--cosmic-white);
+            margin-bottom: var(--space-sm);
+        }
+
+        .breakout-moderator {
+            color: var(--neon-cyan);
+            font-weight: 500;
+            margin-bottom: var(--space-sm);
+            font-family: var(--font-display);
+        }
+
+        .breakout-description {
+            color: var(--cosmic-silver);
+            line-height: 1.5;
+        }
+
+        /* Media Kit */
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .media-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .media-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 255, 255, 0.3);
+            border-color: var(--neon-cyan);
+        }
+
+        .media-image {
+            width: 100%;
+            height: 300px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .media-content {
+            padding: var(--space-lg);
+            text-align: center;
+        }
+
+        .media-title {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--cosmic-white);
+            margin-bottom: var(--space-sm);
+        }
+
+        .media-description {
+            color: var(--cosmic-silver);
+            margin-bottom: var(--space-md);
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, var(--neon-purple), var(--cosmic-violet));
+            color: var(--cosmic-white);
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px var(--neon-purple);
+            text-decoration: none;
+            color: var(--cosmic-white);
+        }
+
+        /* Committee Grid */
+        .committee-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .committee-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+        }
+
+        .committee-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 0, 153, 0.2);
+            border-color: var(--neon-pink);
+        }
+
+        .committee-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto var(--space-md);
+            background: var(--cosmic-dark);
+            background-size: cover;
+            background-position: center;
+            border: 3px solid var(--neon-pink);
+            box-shadow: 0 0 15px var(--neon-pink);
+        }
+
+        .committee-name {
+            font-family: var(--font-display);
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--cosmic-white);
+            margin-bottom: var(--space-xs);
+        }
+
+        .committee-role {
+            color: var(--neon-cyan);
+            font-weight: 500;
+            margin-bottom: var(--space-sm);
+        }
+
+        .linkedin-link {
+            color: var(--neon-purple);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .linkedin-link:hover {
+            color: var(--cosmic-white);
+            text-shadow: 0 0 5px var(--neon-purple);
+        }
+
+        /* Partners */
+        .partners-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .partner-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 153, 255, 0.2);
+            border-color: var(--electric-blue);
+        }
+
+        .partner-logo {
+            width: 100%;
+            height: 180px;
+            background: rgba(255, 255, 255, 0.1);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-md);
+            backdrop-filter: blur(10px);
+        }
+
+        .partner-name {
+            font-family: var(--font-display);
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--cosmic-white);
+            margin-bottom: var(--space-sm);
+        }
+
+        /* Contact Info - Reduced Visual Priority */
+        .contact-info {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: var(--radius-md);
+            padding: var(--space-sm);
+            margin-top: var(--space-md);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+        }
+
+        .contact-info p {
+            font-size: 0.8rem;
+            color: var(--cosmic-silver);
+            opacity: 0.7;
+            margin: 0;
+        }
+
+        .contact-info a {
+            color: var(--cosmic-silver);
+            text-decoration: none;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .contact-info a:hover {
+            color: var(--neon-cyan);
+            opacity: 1;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--cosmic-purple), var(--cosmic-indigo));
+            padding: var(--space-xl) 0 var(--space-sm);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+        }
+
+        .footer-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer h3 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            color: var(--neon-pink);
+            text-shadow: 0 0 15px var(--neon-pink);
+        }
+
+        .footer p {
+            color: var(--cosmic-silver);
+            margin-bottom: var(--space-sm);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .event-info-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-md);
+            }
+            
+            .hero {
+                min-height: 80vh;
+                padding: var(--space-xl) 0;
+            }
+
+            .agenda-navigation {
+                gap: var(--space-md);
+                padding: var(--space-sm);
+            }
+
+            .nav-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.25rem;
+            }
+
+            .agenda-counter {
+                font-size: 1rem;
+            }
+
+            .breakout-sessions-list {
+                padding: var(--space-sm);
+            }
+
+            .breakout-session-item h4 {
+                font-size: 0.9rem;
+            }
+
+            .breakout-session-item p {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 var(--space-sm);
+            }
+            
+            .section {
+                padding: var(--space-xl) 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .agenda-navigation {
+                flex-direction: column;
+                gap: var(--space-sm);
+            }
+
+            .nav-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 1rem;
+            }
+
+            .schedule-item {
+                padding: var(--space-md);
+            }
+
+            .schedule-title {
+                font-size: 1.125rem;
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Focus styles */
+        .btn:focus,
+        .nav-links a:focus,
+        .speaker-card:focus {
+            outline: 2px solid var(--neon-cyan);
+            outline-offset: 2px;
+        }
+
+        /* Loading States */
+        .loading-skeleton {
+            background: linear-gradient(90deg, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.1) 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Cosmic Elements -->
+    <div class="cosmic-orb"></div>
+    <div class="cosmic-orb"></div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="welcome-text">Welcome to</div>
+                <h1>BEYOND AWARENESS</h1>
+                <p class="hero-subtitle">Taking Action for Youth Mental Health</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">EVENT SCHEDULE</h2>
+                <p class="section-subtitle">A full day of inspiration, learning, and connection</p>
+            </div>
+
+            <!-- Navigation Controls -->
+            <div class="agenda-navigation">
+                <button class="nav-btn" id="prevBtn" onclick="previousAgenda()">&uarr;</button>
+                <span class="agenda-counter" id="agendaCounter">1 / 15</span>
+                <button class="nav-btn" id="nextBtn" onclick="nextAgenda()">&darr;</button>
+            </div>
+
+            <div class="schedule-timeline">
+                <!-- Agenda items will be shown one at a time -->
+                <div class="schedule-item glass-card agenda-item active" data-index="0">
+                    <div class="schedule-time">10:00 AM - 10:10 AM</div>
+                    <h3 class="schedule-title">Event Opening</h3>
+                    <p class="schedule-description">Community agreements and ice breakers led by Arc Telos Saint Amour</p>
+                </div>
+
+                <div class="schedule-item glass-card agenda-item" data-index="1">
+                    <div class="schedule-time">10:10 AM - 10:15 AM</div>
+                    <h3 class="schedule-title">Welcome to FYP 2025 Event</h3>
+                    <p class="schedule-description">Led by Arc Telos Saint Amour</p>
+                </div>
+
+                <div class="schedule-item glass-card agenda-item" data-index="2">
+                    <div class="schedule-time">10:15 AM - 10:20 AM</div>
+                    <h3 class="schedule-title">Introduction of Keynote Speaker</h3>
+                    <p class="schedule-description">Led by Arc Telos Saint Amour</p>
+                </div>
+
+                <div class="schedule-item glass-card agenda-item" data-index="3">
+                    <div class="schedule-time">10:20 AM - 10:35 AM</div>
+                    <h3 class="schedule-title">UN Science Summit Keynote Speech</h3>
+                    <p class="schedule-description"><strong>Judah Njoroge</strong> - "Community and Mental Health: Reimagining Meaningful Youth Engagement for Global Wellbeing"</p>
+                </div>
+
+                <div class="schedule-item glass-card agenda-item" data-index="4">
+                    <div class="schedule-time">10:35 AM - 11:20 AM</div>
+                    <h3 class="schedule-title">UN Science Summit Panel</h3>
+                    <p class="schedule-description">Community and Mental Health: Reimagining Meaningful Youth Engagement for Global Wellbeing<br><em>Panelists: Judah Njoroge, Benny Prawira Siauw, Isaac Lara, Anpotowin Jensen<br>Moderator: Arc Telos Saint Amour</em></p>
+                </div>
+
+                <div class="schedule-item glass-card agenda-item" data-index="5">
+                    <div class="schedule-time">11:20 AM - 11:25 AM</div>
+                    <h3 class="schedule-title">Transition to Breakout Sessions</h3>
+                    <p class="schedule-description">Led by Arc Telos Saint Amour</p>
+                </div>
+
+                <div class="schedule-item glass-card agenda-item" data-index="6">
+                    <div class="schedule-time">11:25 AM - 12:15 PM</div>
+                    <h3 class="schedule-title">Breakout Sessions</h3>
+                    <p class="schedule-description">Choose from three concurrent sessions:</p>
+                    <div class="breakout-sessions-list">
+                        <div class="breakout-session-item">
+                            <h4>Breaking Barriers and Promoting Youth Mental Health Equity</h4>
+                            <p><em>Moderator: Alyna Lim | Panelists: Nze Okoronta, Ross Layton, Dr. Sean Thum</em></p>
+                        </div>
+                        <div class="breakout-session-item">
+                            <h4>The Power of Connection: Fostering Social Support for Youth Wellbeing</h4>
+                            <p><em>Moderator: Glen Koh | Panelists: Marx Wang, Kate Barranco, Mercy Mkandawire</em></p>
+                        </div>
+                        <div class="breakout-session-item">
+                            <h4>Policy, Action, and Youth Mental Health: Why Grassroots Advocacy Matters</h4>
+                            <p><em>Moderator: Ronit Chakraborty | Panelists: Saanvi Arora, Connor Dalgaard, Emmy Egulu</em></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="schedule-item glass-card agenda-item" data-index="7">
+                    <div class="schedule-time">12:15 PM - 12:25 PM</div>
+                    <h3 class="schedule-title">Reflections from Breakout Sessions</h3>
+                    <p class="schedule-description">Led by Alyna Lim</p>
+                </div>
+
+                <div class="schedule-item glass-card agenda-item" data-index="8">
+                    <div class="schedule-time">12:25 PM - 12:35 PM</div>
+                    <h3 class="schedule-title">Transition + Raffle Draw</h3>
+                    <p class="schedule-description">Led by Alyna Lim</p>
+                </div>
+
+                <div class="schedule-item glass-card agenda-item" data-index="9">
+                    <div class="schedule-time">12:35 PM - 1:25 PM</div>
+                    <h3 class="schedule-title">Partner-Led Sessions</h3>
+                    <p class="schedule-description">Choose from three concurrent sessions:</p>
+                    <div class="breakout-sessions-list">
+                        <div class="breakout-session-item">
+                            <h4>Youth Move National Session</h4>
+                            <p><em>Youth-driven mental health advocacy focusing on organizing strategies and systemic change</em></p>
+                        </div>
+                        <div class="breakout-session-item">
+                            <h4>Youth Power Project Session</h4>
+                            <p><em>Empowering youth through advocacy and leadership development with practical organizing skills</em></p>
+                        </div>
+                        <div class="breakout-session-item">
+                            <h4>Letters to Strangers Session</h4>
+                            <p><em>Promoting kindness and mental wellness through community building and positive action initiatives</em></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="schedule-item glass-card agenda-item" data-index="10">
+                    <div class="schedule-time">1:25 PM - 1:30 PM</div>
+                    <h3 class="schedule-title">Reflections from Partner Sessions</h3>
+                    <p class="schedule-description">Led by Judah Njoroge</p>
+                </div>
+
+                <div class="schedule-item glass-card agenda-item" data-index="11">
+                    <div class="schedule-time">1:30 PM - 1:40 PM</div>
+                    <h3 class="schedule-title">Acknowledgements</h3>
+                    <p class="schedule-description">Led by Dr. Oluwaferanmi Omitoyin</p>
+                </div>
+
+                <div class="schedule-item glass-card agenda-item" data-index="12">
+                    <div class="schedule-time">1:40 PM - 2:00 PM</div>
+                    <h3 class="schedule-title">Closing of FYP 2025 Summit</h3>
+                    <p class="schedule-description">Led by Dr. Oluwaferanmi Omitoyin</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- JavaScript -->
+    <script>
+        // Agenda Navigation System
+        let currentAgendaIndex = 0;
+        const agendaItems = document.querySelectorAll('.agenda-item');
+        const totalAgendaItems = agendaItems.length;
+
+        function updateAgendaDisplay() {
+            // Hide all agenda items
+            agendaItems.forEach((item, index) => {
+                item.classList.remove('active');
+                if (index === currentAgendaIndex) {
+                    item.classList.add('active');
+                }
+            });
+
+            // Update counter
+            document.getElementById('agendaCounter').textContent = `${currentAgendaIndex + 1} / ${totalAgendaItems}`;
+
+            // Update navigation buttons
+            document.getElementById('prevBtn').disabled = currentAgendaIndex === 0;
+            document.getElementById('nextBtn').disabled = currentAgendaIndex === totalAgendaItems - 1;
+        }
+
+        function nextAgenda() {
+            if (currentAgendaIndex < totalAgendaItems - 1) {
+                currentAgendaIndex++;
+                updateAgendaDisplay();
+            }
+        }
+
+        function previousAgenda() {
+            if (currentAgendaIndex > 0) {
+                currentAgendaIndex--;
+                updateAgendaDisplay();
+            }
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
+                event.preventDefault();
+                nextAgenda();
+            } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
+                event.preventDefault();
+                previousAgenda();
+            }
+        });
+
+        // Modal Functions (simplified - keeping only what's needed)
+        function openModal(speakerId, imageUrl, name, title, description) {
+            // Modal functionality can be added later if needed
+        }
+
+        function closeModal() {
+            // Modal functionality can be added later if needed
+        }
+
+        // Function to open image in new window
+        function openImageInNewWindow(imageUrl) {
+            window.open(imageUrl, '_blank');
+        }
+
+        // Enhanced smooth scrolling for all navigation links
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize agenda display
+            updateAgendaDisplay();
+
+            // Handle logo click to scroll to top
+            const logo = document.querySelector('.logo');
+            if (logo) {
+                logo.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Dynamic starfield creation
+        function createStars() {
+            const starsContainer = document.createElement('div');
+            starsContainer.style.position = 'fixed';
+            starsContainer.style.top = '0';
+            starsContainer.style.left = '0';
+            starsContainer.style.width = '100%';
+            starsContainer.style.height = '100%';
+            starsContainer.style.pointerEvents = 'none';
+            starsContainer.style.zIndex = '-1';
+            
+            for (let i = 0; i < 50; i++) {
+                const star = document.createElement('div');
+                star.style.position = 'absolute';
+                star.style.width = Math.random() * 3 + 'px';
+                star.style.height = star.style.width;
+                star.style.backgroundColor = '#ffffff';
+                star.style.borderRadius = '50%';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.opacity = Math.random();
+                star.style.animation = `twinkle ${Math.random() * 3 + 2}s ease-in-out infinite alternate`;
+                starsContainer.appendChild(star);
+            }
+            
+            document.body.appendChild(starsContainer);
+        }
+
+        // Initialize additional cosmic effects
+        document.addEventListener('DOMContentLoaded', () => {
+            createStars();
+        });
+
+        // Performance monitoring
+        if ('performance' in window) {
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    const perfData = performance.getEntriesByType('navigation')[0];
+                    console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+                }, 0);
+            });
+        }
+    </script>
+</body>
+</html>
